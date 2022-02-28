@@ -106,7 +106,7 @@ qwerty.addEventListener('click', (e) => {
     if (letter.length === show.length) {
         overlay.className = 'win';
         overlay.style.display = 'flex';
-        title.textContent = `Well done you guessed it, the answer was ${getRandomPhraseAsArray(phrases)}`;
+        title.textContent = `Well done you guessed it, the answer was '${phraseArray.join('')}'`;
 
 
 
@@ -115,7 +115,7 @@ qwerty.addEventListener('click', (e) => {
     } else if (missed > 4 ) {
         overlay.className = 'lose';
         overlay.style.display = 'flex';
-        title.textContent = `User fails - the random phrase was ${getRandomPhraseAsArray(phrases)}`;
+        title.textContent = `User fails - the random phrase was '${phraseArray.join('')}'`;
 
         overlay.insertBefore(resetButton, startButton);
         startButton.style.display = 'none';
