@@ -106,7 +106,9 @@ qwerty.addEventListener('click', (e) => {
     if (letter.length === show.length) {
         overlay.className = 'win';
         overlay.style.display = 'flex';
-        title.textContent = 'Well done, you won!';
+        title.textContent = `Well done you guessed it, the answer was ${getRandomPhraseAsArray(phrases)}`;
+
+
 
         overlay.insertBefore(resetButton, startButton);
         startButton.style.display = 'none';
